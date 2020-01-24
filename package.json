@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "name": "contact-button",
+  "version": "1.0.0",
+  "description": "Contact button for websites.",
+  "main": "index.js",
+  "repository": "https://github.com/ecoztas/contact-button",
+  "author": "ÖZTAŞ, Emre Can <me@emrecanoztas.com>",
+  "license": "MIT",
+  "private": false
+}

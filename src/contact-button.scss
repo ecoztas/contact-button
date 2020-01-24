@@ -1,0 +1,57 @@
+@charset 'utf-8';
+
+$svg_paths: (
+    'light': '../svg/light.svg',
+    'dark': '../svg/dark.svg',
+    'special': '../svg/special.svg',
+    'color': '../svg/color.svg'
+);
+
+$sizes: (
+    'xs': .75em,
+    'sm': .875em,
+    'lg': 1.33em,
+    '2x': 2em,
+    '3x': 3em,
+    '4x': 4em,
+    '5x': 5em,
+    '6x': 6em,
+    '7x': 7em,
+    '8x': 8em,
+    '9x': 9em,
+    '10x': 10em
+);
+
+.contact-button {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    border: none;
+    text-decoration: none;
+    z-index: 1000;
+    width: #{map-get($sizes, '4x')};
+    height: #{map-get($sizes, '4x')};
+    background-size: #{map-get($sizes, '4x')} #{map-get($sizes, '4x')};
+}
+
+.position-left {
+    left: 12px;
+}
+
+.position-right {
+    right: 12px;
+}
+
+@each $size_name, $size_value in $sizes {
+    .size-#{$size_name} {
+        width: #{$size_value} !important;
+        height: #{$size_value} !important;
+        background-size: #{$size_value} #{$size_value} !important;
+    }
+}
+
+@each $svg_name, $svg_value in $svg_paths {
+    .icon-#{$svg_name} {
+        background: url(#{$svg_value});
+    }
+}
